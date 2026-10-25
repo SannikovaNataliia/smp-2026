@@ -18,6 +18,9 @@ propushcheno = 0
 ip = Counter()
 kody = Counter()
 pomylky_5xx = []
+shliakhy_5xx = Counter()
+shliakhy_404 = Counter()
+khto_404 = {}
 
 with open("data/access.log", encoding="utf-8") as f:
     for ryadok in f:
@@ -30,6 +33,10 @@ with open("data/access.log", encoding="utf-8") as f:
         kody[m["kod"]] += 1
         if m["kod"].startswith("5"):
             pomylky_5xx.append((m["chas"], m["shliakh"]))
+            shliakhy_5xx[m["shliakh"]] += 1
+        if m["kod"] == "404":
+            shliakhy_404[m["shliakh"]] += 1
+            khto_404.setdefault(m["shliakh"], set()).add(m["ip"])
 
 print(f"1. Розібрано: {rozibrano}, пропущено: {propushcheno}")
 
@@ -44,3 +51,11 @@ for kod, kilkist in sorted(kody.items()):
 print(f"\n4. Запити з помилкою 5xx ({len(pomylky_5xx)}):")
 for chas, shliakh in pomylky_5xx:
     print(f"   {chas}  {shliakh}")
+
+print("\n5. Помилки 5xx по шляхах:")
+for shliakh, kilkist in shliakhy_5xx.most_common():
+    print(f"   {kilkist:3}  {shliakh}")
+
+print("\n6. Запити 404 по шляхах (і з яких IP):")
+for shliakh, kilkist in shliakhy_404.most_common():
+    print(f"   {kilkist:3}  {shliakh:16} {', '.join(sorted(khto_404[shliakh]))}")

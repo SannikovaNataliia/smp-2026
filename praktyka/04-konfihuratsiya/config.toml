@@ -1,0 +1,13 @@
+name = "raid-reminder-bot"
+version = "1.10"
+language = "uk"
+port = 8080
+debug = false
+reminder_minutes = 30
+min_attendance = 0.75
+raid_days = ["Wednesday", "Thursday", "Sunday"]
+
+[discord]
+channel = "raid-announcements"
+role = "Raider"
+mention_everyone = false

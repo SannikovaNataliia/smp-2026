@@ -3,7 +3,7 @@ version: "1.10"
 language: uk
 port: 8080
 debug: false
-reminder_minutes: 30
+reminder_minutes: 60
 min_attendance: 0.75
 raid_days:
   - Wednesday

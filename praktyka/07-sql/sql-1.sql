@@ -23,10 +23,13 @@ SELECT FirstName, LastName, City FROM Customer WHERE Country = 'Canada' AND Comp
 
 
 -- 6. Країни, де є клієнти, — без повторів, за абеткою
+SELECT DISTINCT Country FROM Customer ORDER BY Country
 
 
 -- 7. Альбоми, у назві яких є слово Live
+SELECT Title FROM Album WHERE Title LIKE '%Live%'
 
 
 -- 8. Рахунки за березень 2025 року: номер, дата, країна, сума; за датою
+SELECT InvoiceId, InvoiceDate, BillingCountry, Total FROM Invoice WHERE InvoiceDate >= '2025-03-01' AND InvoiceDate < '2025-04-01' ORDER BY InvoiceDate
 

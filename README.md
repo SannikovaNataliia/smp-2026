@@ -13,6 +13,27 @@
 
 **Студент:** `Санникова Наталія, група 316-пр`
 
+## Мої роботи
+
+Студентка 3 курсу. У вільний час граю в **World of Warcraft** і *сурвайвали* — Enshrouded, RuneScape: Dragonwilds.
+
+| № | Робота | Файл |
+|---|---|---|
+| 1 | Три предметні мови | [movy.md](praktyka/01-movy/movy.md) |
+| 2 | Шпаргалка Git | [shpargalka.md](praktyka/02-git/shpargalka.md) |
+| 2 | Розвʼязаний конфлікт | [pryvitannia.py](praktyka/02-git/pryvitannia.py) |
+| 3 | Сторінка про мене | [about.html](praktyka/03-rozmitka/about.html) |
+
+![Пройдені рівні тренажера Git](praktyka/02-git/trenazher.png)
+
+> Спершу `git commit`, а потім уже все інше.
+
+Моя улюблена команда Git:
+
+```bash
+git log --oneline --graph
+```
+
 Усе. Далі кожне заняття ви складаєте роботи в цей репозиторій.
 
 > ⚠️ Не працюйте в цьому репозиторії напряму — це шаблон.

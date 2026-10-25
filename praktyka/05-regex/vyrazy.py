@@ -37,4 +37,4 @@ VYRAZY = {
 }
 
 # Посилання на один ваш збережений вираз на regex101 (кнопка Save):
-# regex101:
+# regex101: https://regex101.com/r/fIfzmI/1
